@@ -1,10 +1,12 @@
 import React from "react";
-import Song from './Components/Components/Song';
-const MusicTable = ({musicInfo}) => {
+import SongComponent from "./musicInfo/musicInfo";
+
+
+const MusicTable = ({ musicInfo }) => {
   return (
     <div>
       <table>
-        <thread>
+        <thead>
           <tr>
             <th>Title</th>
             <th>Album</th>
@@ -12,14 +14,14 @@ const MusicTable = ({musicInfo}) => {
             <th>Genre</th>
             <th>Release Date</th>
           </tr>
-        </thread>
+        </thead>
         <tbody>
           {musicInfo.map((item, index) => (
-            <Song
+            <SongComponent
               key={index}
               title={item.title}
               album={item.album}
-              artist={item.artis}
+              artist={item.artist}
               genre={item.genre}
               releaseDate={item.releaseDate}
             />
@@ -30,5 +32,6 @@ const MusicTable = ({musicInfo}) => {
   );
 };
 
-
 export default MusicTable;
+
+
