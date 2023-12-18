@@ -1,8 +1,7 @@
 import React from "react";
-import SongComponent from "./musicInfo/musicInfo";
+import SongComponent from "../SongComponent/SongComponent";
 
-
-const MusicTable = ({ musicInfo }) => {
+const MusicTable = ({ musicInfo, onDelete, onEdit }) => {
   return (
     <div>
       <table>
@@ -24,6 +23,8 @@ const MusicTable = ({ musicInfo }) => {
               artist={item.artist}
               genre={item.genre}
               releaseDate={item.releaseDate}
+              onDelete={onDelete}
+              onEdit={onEdit}
             />
           ))}
         </tbody>
@@ -33,5 +34,3 @@ const MusicTable = ({ musicInfo }) => {
 };
 
 export default MusicTable;
-
-

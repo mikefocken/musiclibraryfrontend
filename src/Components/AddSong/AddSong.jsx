@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-const AddASong = ({ onAddASong }) => {
+
+const AddSong = ({ onAddASong }) => {
   const [newSong, setNewSong] = useState({
     title: "",
     album: "",
@@ -13,6 +14,7 @@ const AddASong = ({ onAddASong }) => {
     const { name, value } = e.target;
     setNewSong({ ...newSong, [name]: value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const newSongData = newSong;
@@ -83,5 +85,6 @@ const AddASong = ({ onAddASong }) => {
   );
 };
 
-export default AddASong;
+export default AddSong;
+
 

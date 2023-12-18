@@ -1,1 +1,12 @@
 
+table{
+    border-collapse: separate ;
+     border-spacing: 0px 10 px;
+}
+
+td { 
+padding: 8px; 
+}
+onEdit{
+    padding: 8px;
+}
